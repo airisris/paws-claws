@@ -34,7 +34,7 @@
   ]);
 
   // redirect
-  $_SESSION["success"] = "Delete user successful";
+  $_SESSION["success"] = "User deleted successfully.";
   header("Location: /users"); 
   exit;
 ?>

@@ -13,6 +13,7 @@
   ]);
 
   // redirect
+  $_SESSION["success"] = "Adoption deleted successfully.";
   header("Location: " . $_SERVER['HTTP_REFERER']); 
   exit;
 ?>

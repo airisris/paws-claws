@@ -17,7 +17,7 @@
       "post_id" => $post_id
     ]);
     // redirect
-    $_SESSION["error"] = "Post removed successfully from favourite.";
+    $_SESSION["success"] = "Post removed successfully from favourite.";
     header("Location: " . $_SERVER['HTTP_REFERER']);
     exit;
   } else {

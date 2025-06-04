@@ -13,7 +13,7 @@
 
     // error checking
     if (empty($address) || empty($name)) {
-        $_SESSION["error"] = "All fields are required";
+        $_SESSION["error"] = "All fields are required.";
         header("Location: /post?id=$post_id");
         exit;
     }

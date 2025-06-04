@@ -9,7 +9,7 @@
 
     // error checking
     if (empty($id)||empty($name)||empty($role)){
-        $_SESSION["error"] = "All fields are required";
+        $_SESSION["error"] = "All fields are required.";
     } else {
         // edit user
         $sql = "UPDATE users SET name = :name, role = :role WHERE id = :id";
@@ -19,7 +19,7 @@
             "name" => $name,
             "role" => $role
         ]);
-        $_SESSION["success"] = "Edit user successful";
+        $_SESSION["success"] = "User edited successfully.";
     }
     // redirect
     header("Location: /users");

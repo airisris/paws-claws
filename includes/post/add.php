@@ -16,7 +16,7 @@
 
   // error checking
   if (empty($name)||empty($breed)||empty($age)||empty($price)||empty($groom)||$image['error'] === UPLOAD_ERR_NO_FILE){
-    $_SESSION["error"] = "All fields are required";
+    $_SESSION["error"] = "All fields are required.";
     header("Location: /post-add");
     exit;
   } 

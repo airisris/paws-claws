@@ -39,7 +39,7 @@
 
             // error checking
             if (empty($email) || empty($password)){
-                $this->setErrorMessage( "All fields are required", "/login" );
+                $this->setErrorMessage( "All fields are required.", "/login" );
             } else {
                 // get the user data by email
                 $user = $this->getUserDataByEmail($email);
@@ -55,10 +55,10 @@
                         $this->redirect("/");
                         exit;
                     } else {
-                        $this->setErrorMessage( "Password provided is incorrect", "/login" );
+                        $this->setErrorMessage( "Password provided is incorrect.", "/login" );
                     }
                 } else {
-                    $this->setErrorMessage( "Email provided does not exist", "/login" );
+                    $this->setErrorMessage( "Email provided does not exist.", "/login" );
                 }
 
             }
@@ -74,9 +74,9 @@
 
             // error checking
             if (empty($name) || empty($email) || empty($password) || empty($confirm_password)){
-                $this->setErrorMessage( "All fields are required", "/signup" );
+                $this->setErrorMessage( "All fields are required.", "/signup" );
             } else if ($password !== $confirm_password){
-                $this->setErrorMessage( "Your password is not a match", "/signup" );
+                $this->setErrorMessage( "Password is not matched.", "/signup" );
             } else {
                 $sql = "INSERT INTO users (`name`, `email`, `password`) VALUES (:name, :email, :password)";
                 $query = $this->database->prepare($sql);
@@ -86,7 +86,7 @@
                     "password" => password_hash($password, PASSWORD_DEFAULT)
                 ]);
                 // redirect
-                $_SESSION["success"] = "Account created successfully. Please login";
+                $_SESSION["success"] = "Account created successfully. Please login.";
                 $this->redirect("/login");
             }
         }

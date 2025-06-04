@@ -27,7 +27,7 @@
     ]);
 
     // redirect
-    $_SESSION["success"] = "Delete post successful";
+    $_SESSION["success"] = "Post deleted successfully.";
     header("Location: " . $_SERVER['HTTP_REFERER']); 
     exit;
 ?>

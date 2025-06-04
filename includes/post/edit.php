@@ -15,7 +15,7 @@
 
     // error checking
     if (empty($name)||empty($breed)||empty($age)||empty($price)||empty($groom)||empty($image)){
-      $_SESSION["error"] = "All fields are required";
+      $_SESSION["error"] = "All fields are required.";
       header("Location: /post-edit?id=". $id);
       exit;
     } 
@@ -57,7 +57,7 @@
   }
     
     // redirect
-    $_SESSION["success"] = "Edit post successful.";
+    $_SESSION["success"] = "Post edited successfully.";
     header("Location: " . $_SERVER['HTTP_REFERER']);
     exit;
 ?>
