@@ -20,7 +20,7 @@
   ]);
 
   // delete from posts table
-  $sql = "DELETE FROM posts WHERE id = :id";
+  $sql = "DELETE FROM posts WHERE user_id = :id";
   $query = $database->prepare( $sql );
   $query->execute([
     "id" => $user_id
