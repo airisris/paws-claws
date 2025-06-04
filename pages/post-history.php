@@ -34,6 +34,7 @@
     <a href="/post-history"><button class="px-4 py-1 position-absolute rounded-top bg-white border-0" style="top:-32px; left: 235px;">History</button></a>
     <!-- start table -->
     <table class="table">
+      <?php require "parts/message_error.php"; ?>
       <?php require "parts/message_success.php"; ?>
       <?php if(!empty($posts)) { ?>
       <thead>

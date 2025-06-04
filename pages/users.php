@@ -27,6 +27,7 @@
     <!-- tag -->
     <a href="/users"><button class="px-4 py-1 position-absolute rounded-top bg-white border-0" style="top:-32px;">Users</button></a>
     <table class="table">
+      <?php require "parts/message_error.php"; ?>
       <?php require "parts/message_success.php"; ?>
       <thead>
         <tr>
