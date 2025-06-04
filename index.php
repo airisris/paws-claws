@@ -11,7 +11,7 @@
     //remove all the query string from the url
     $path = parse_url($path, PHP_URL_PATH);
 
-    // once you figure outh the path, then we need to load relevant content based on the path
+    // load relevant content based on the path
     switch ($path){
         case '/login':
             require "pages/login.php";

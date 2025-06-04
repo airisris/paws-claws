@@ -26,9 +26,6 @@
   <div class="p-3 ps-4 bg-white rounded me-4 position-relative" style="margin-top:100px; min-height: 510px;">
     <!-- tag -->
     <a href="/users"><button class="px-4 py-1 position-absolute rounded-top bg-white border-0" style="top:-32px;">Users</button></a>
-    <!-- message -->
-    <?php require "parts/message_success.php"; ?>
-    <?php require "parts/message_error.php"; ?>
     <table class="table">
       <?php require "parts/message_success.php"; ?>
       <thead>

@@ -32,9 +32,6 @@
     <a href="/post-adopt"><button class="px-4 py-1 position-absolute rounded-top bg-secondary border-0" style="top:-32px;">Adopt</button></a>
     <a href="/post-ship"><button class="px-4 py-1 position-absolute rounded-top bg-secondary border-0" style="top:-32px; left: 125px;">To Ship</button></a>
     <a href="/post-history"><button class="px-4 py-1 position-absolute rounded-top bg-white border-0" style="top:-32px; left: 235px;">History</button></a>
-    <!-- message -->
-    <?php require "parts/message_success.php"; ?>
-    <?php require "parts/message_error.php"; ?>
     <!-- start table -->
     <table class="table">
       <?php require "parts/message_success.php"; ?>
