@@ -1,0 +1,27 @@
+<?php
+  // connect to database
+  $database = connectToDB();
+
+  // get data
+  $id = $_POST["id"];
+  $password = $_POST["password"]; 
+  $confirm_password = $_POST["confirm_password"]; 
+
+  // error checking
+  if (empty($password)||empty($confirm_password)){
+    $_SESSION["error"] = "All fields are required";
+  } else if ($password !== $confirm_password){
+    $_SESSION["error"] = "Your password is not match";
+  } else {
+    $sql = "UPDATE users SET password = :password WHERE id = :id";
+    $query = $database->prepare($sql);
+    $query->execute([
+      "id" => $id,
+      "password" => password_hash($password, PASSWORD_DEFAULT)
+    ]);
+    $_SESSION["success"] = "Change password successful.";
+  }
+  // redirect
+  header("Location: /users");
+  exit;
+?>
