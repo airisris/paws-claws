@@ -49,7 +49,7 @@
     $sql .= " WHERE " . implode(" AND ", $filter);
   }
  
-  $sql.= " ORDER BY posts.id DESC";
+  $sql .= " ORDER BY posts.id DESC";
   $query = $database->prepare($sql);
   $query->execute($data);
   $posts = $query->fetchAll();

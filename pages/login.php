@@ -1,5 +1,5 @@
 <?php
-  // connect to Database
+  // connect to database
   $database = connectToDB();
 ?>
 <?php require "parts/header.php"; ?>
